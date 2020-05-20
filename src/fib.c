@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/20 06:51:06 by ubuntu            #+#    #+#             */
-/*   Updated: 2020/05/20 08:58:29 by ubuntu           ###   ########.fr       */
+/*   Updated: 2020/05/20 09:09:04 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,31 @@ static int	fib_rec(size_t fib_nbr)
 	return (fib_result);
 }
 
-static int	fib_iterative(size_t fib_nbr, unsigned long long *fib_result_array)
+static int	fib_iterative(size_t fib_nbr)
+{
+	unsigned long long		fib_result;
+	size_t					nbr;
+	size_t					next_nbr_2;
+	size_t					nbr_2;
+
+	fib_result = 0;
+	nbr_2 = 0;
+	nbr = -1;
+	while (++nbr <= fib_nbr)
+	{
+		next_nbr_2 = fib_result;
+		if (nbr > 1)
+			fib_result += nbr_2;
+		else if (nbr == 1)
+			fib_result += 1;
+		else
+			fib_result = 0;
+		nbr_2 = next_nbr_2;
+	}
+	return (fib_result);
+}
+
+static int	fib_iterative_mem(size_t fib_nbr, unsigned long long *fib_result_array)
 {
 	unsigned long long		fib_result;
 	size_t					nbr;
@@ -89,7 +113,9 @@ int			main(int argc, char **argv)
 			if (ft_atoi(argv[2]) == 2)
 				fib_result = fib_rec_mem(nbr, fib_result_array);
 			if (ft_atoi(argv[2]) == 3)
-				fib_result = fib_iterative(nbr, fib_result_array);
+				fib_result = fib_iterative(nbr);
+			if (ft_atoi(argv[2]) == 4)
+				fib_result = fib_iterative_mem(nbr, fib_result_array);
 			ft_printf("%zu: %llu\n", nbr, fib_result);
 		}
 	}
