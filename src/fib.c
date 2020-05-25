@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/20 06:51:06 by ubuntu            #+#    #+#             */
-/*   Updated: 2020/05/26 01:07:32 by ubuntu           ###   ########.fr       */
+/*   Updated: 2020/05/26 01:18:39 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,7 @@ static int	fib_rec_save_prev(size_t fib_nbr, unsigned long long nbr_1,
 		if (c == 1)
 			nbr_1 = 0;
 		else if (c == 2)
-		{
 			nbr_1 = 1;
-			nbr_2 = 0;
-		}
 		fib_result = fib_rec_save_prev(fib_nbr, nbr_2 + nbr_1, nbr_1, c + 1);
 	}
 	else
