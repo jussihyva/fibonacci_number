@@ -6,7 +6,7 @@
 #    By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/20 07:04:29 by ubuntu            #+#    #+#              #
-#    Updated: 2020/05/20 07:17:49 by ubuntu           ###   ########.fr        #
+#    Updated: 2020/05/26 01:07:54 by ubuntu           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIB				=	-L lib/lib_ft -l ft -L lib/lib_ftprintf -l ftprintf
 
 NAME_MAIN		=	src/fib.c
 SRC_FOLDER		=	src
-SRC				=	
+SRC				=	utils.c fib_iterative.c
 
 OBJ_FOLDER		=	obj
 OBJ				=	$(addprefix $(OBJ_FOLDER)/, $(patsubst %.c, %.o, $(SRC)))
