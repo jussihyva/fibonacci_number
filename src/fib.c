@@ -83,7 +83,8 @@ int			main(int argc, char **argv)
 	function_array[1] = fib_rec;
 	function_array[2] = fib_rec_mem;
 	function_array[3] = fib_iterative;
-	function_array[4] = fib_iterative_mem;
+	function_array[4] = fib_iterative_2;
+	function_array[5] = fib_iterative_mem;
 	if (argc == 3)
 	{
 		fib_nbr = ft_atoi(argv[1]);
