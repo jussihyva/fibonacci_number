@@ -36,6 +36,27 @@ int			fib_iterative(size_t fib_nbr)
 	return (fib_result);
 }
 
+int			fib_iterative_2(size_t fib_nbr)
+{
+	unsigned long long		fib_result;
+	size_t					nbr_1;
+	size_t					nbr_2;
+
+	fib_result = 0;
+	nbr_1 = 1;
+	nbr_2 = 0;
+	while (nbr_1 <= fib_nbr)
+	{
+		if (nbr_1 > 1)
+			fib_result = nbr_1 + nbr_2;
+		else if (nbr_1 == 1)
+			fib_result = 1;
+		nbr_2 = nbr_1;
+		nbr_1 = fib_result;
+	}
+	return (fib_result);
+}
+
 int			fib_iterative_mem(size_t fib_nbr)
 {
 	unsigned long long				fib_result;
