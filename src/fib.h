@@ -20,8 +20,9 @@ typedef enum	e_cal_type
 	e_fib_recursive = 1,
 	e_fib_recursive_memory = 2,
 	e_fib_iterative = 3,
-	e_fib_iterative_memory = 4,
-	e_fib_iterative_save_prev = 5
+	e_fib_iterative_2 = 4,
+	e_fib_iterative_memory = 5,
+	e_fib_iterative_save_prev = 6
 }				t_cal_type;
 
 unsigned long long			*create_array(size_t fib_nbr);
